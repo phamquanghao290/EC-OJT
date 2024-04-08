@@ -9,7 +9,7 @@ function NotFound() {
         <p>The page you are looking for might have been removed or temporarily unavailable.</p><br /><br />
         <Link to="/"><button style={{cursor: "pointer", backgroundColor: "#8A33FD", color: "white", border: "none", padding: "10px 20px 10px 20px", borderRadius: "7px", fontSize: "16px"}}>Back to HomePage</button></Link>
     </div>
-  )
+  )  
 }
 
 export default NotFound
