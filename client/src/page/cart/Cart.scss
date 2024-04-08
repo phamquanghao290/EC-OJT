@@ -21,7 +21,7 @@
     font-family: "Montserrat", sans-serif;
     width: 100%;
     margin-top: 50px;
-    height: 76px;
+    min-height: 76px;
     table {
         width: 100%;
         border-collapse: collapse;
@@ -67,5 +67,55 @@
 }
 
 .total {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: space-between;
     margin-top: 50px;
+    min-height: 368px;
+    background-color: aliceblue;
+    .discount {
+        padding: 50px 0px 0px 100px;
+        .input_discount {
+            display: flex;
+            gap: 10px;
+            button {
+                cursor: pointer;
+                background-color: #8A33FD;
+                color: white;
+                border: none;
+                padding: 10px 20px 10px 20px;
+                border-radius: 7px;
+                font-size: 16px;
+            }
+        }
+        .continue {
+            cursor: pointer;
+            background-color: white;
+            color: rgb(146, 140, 140);
+            border: 1px solid rgb(211, 209, 209);
+            padding: 10px 20px 10px 20px;
+            border-radius: 7px;
+            font-size: 16px;
+        }
+    }
+    .checkout {
+        font-size: larger;
+        padding: 50px 100px 0px 0px;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        button {
+            cursor: pointer;
+            background-color: #8A33FD;
+            color: white;
+            border: none;
+            padding: 20px 20px 20px 20px;
+            border-radius: 7px;
+            font-size: 16px;
+            width: 100%;
+            font-size: larger;
+            font-weight: bold;
+        }
+    }
 }

@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Cart.scss";
-import p1 from "../../public/images/Rectangle 734.png";
-import deletecon from "../../public/images/deletecon.png";
+import p1 from "../../../public/images/Rectangle 734.png";
+import deletecon from "../../../public/images/deletecon.png";
 import { Input } from "antd";
 
 function Cart() {
     return (
         <div>
             <div className="container">
-                <h1 className="title">Cart</h1>
+                <h1 className="title">Cart</h1><br />
                 <p>
                     Please fill in the fields below and click place order to
                     complete your purchase!
@@ -43,7 +43,7 @@ function Cart() {
                             <td>1</td>
                             <td>Free</td>
                             <td>$19.99</td>
-                            <td>
+                            <td style={{ cursor: "pointer" }}>
                                 <img src={deletecon} alt="" />
                             </td>
                         </tr>
@@ -60,7 +60,7 @@ function Cart() {
                             <td>1</td>
                             <td>Free</td>
                             <td>$19.99</td>
-                            <td>
+                            <td style={{ cursor: "pointer" }}>
                                 <img src={deletecon} alt="" />
                             </td>
                         </tr>
@@ -68,10 +68,32 @@ function Cart() {
                 </table>
             </div>
             <div className="total">
-                <div>
+                <div className="discount">
                     <h2>Discount Codes</h2>
                     <p>Enter your coupon code if you have one.</p><br />
-                    <Input placeholder="Coupon code" />
+                    <div className="input_discount">
+                        <Input placeholder="Coupon code" style={{ width: 300, height: 40, borderRadius: 7 }} />
+                        <button>Apply</button>
+                    </div><br />
+                    <button className="continue">Continue Shopping</button>
+                </div>
+                <div className="checkout">
+                    <div>
+                        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 15 }}>
+                            <p>Subtotal</p>
+                            <p>$19.99</p>
+                        </div>
+                        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 15 }}>
+                            <p>Shipping</p>
+                            <p>Free</p>
+                        </div>
+                        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 15, fontWeight: "bold" }}>
+                            <p>Grand Total</p>
+                            <p>$19.99</p>
+                        </div>    
+                    </div>
+                    <hr />
+                    <button className="continue">Place Order</button>
                 </div>
             </div>
         </div>
